@@ -6,7 +6,7 @@ Date: Thu, 03 Aug 2023 15:41:00 GMT
 Content-Type: text/html; charset=UTF-8 *(belgenin karakter kodlamasini belirtmek icin HTTP basliginda bir karakter kumesi parametresi gonderir)*  
 Connection: close *(HTTP başlığı sunucuya, istemcinin HTTP işlemini tamamladıktan sonra bağlantıyı kapatmak istediğini bildirir.)*  
 Cross-Origin-Embedder-Policy: require-corp *(belirli saldırı türlerinin önlenmesine yardımcı olan, ancak farklı bir kaynaktan gelen kaynakların paylaşılmasından yararlanabilen bir güvenlik önlemidir.)*  
-Cross-Origin-Opener-Policy: same-origin *(Tarama bağlamını yalnızca aynı kaynaklı belgelere yalıtır. Kaynaklar arası belgeler aynı tarama bağlamında yüklenmez.)*  
+Cross-Origin-Opener-Policy: same-origin *(Tarama bağlamını yalnızca aynı kaynaklı belgelere izole eder. Kaynaklar arası belgeler aynı tarama bağlamında yüklenmez.)*  
 Cross-Origin-Resource-Policy: same-origin *(Yalnızca aynı kaynaktan ( yani şema + ana bilgisayar + bağlantı noktası) gelen istekler kaynağı okuyabilir.)*  
 Origin-Agent-Cluster: ?1 *(tarayıcıya, aynı sitedeki kaynaklar arası sayfalar arasında eşzamanlı komut dizisi erişimini engellemesi talimatını veren yeni bir HTTP yanıt başlığıdır.)*(true)  
 Permissions-Policy: accelerometer=(),autoplay=(),camera=(),clipboard-read=(),clipboard-write=(),geolocation=(),gyroscope=(),hid=(),interest-cohort=(),magnetometer=(),microphone=(),payment=(),publickey-credentials-get=(),screen-wake-lock=(),serial=(),sync-xhr=(),usb=()  
@@ -49,6 +49,7 @@ Content-Length: 6980
 Date: Fri, 04 Aug 2023 09:50:21 GMT  
 Server: Google Frontend  
 *Google Frontend terimi, genellikle Google'ın altyapısında bulunan ve kullanıcıların internet tarayıcıları aracılığıyla eriştiği hizmetlerin ön yüzünü (frontend) ifade eder. Google'ın büyük ölçekli hizmetlerini sağlamak için kullandığı bir tür sunucu altyapısıdır. Bu ön yüz sunucuları, kullanıcı taleplerini yönlendirme, işleme ve sonuçları geri döndürme görevlerini üstlenirler. Google Frontend sunucuları, ağ trafiğini yönlendirme, yük dengeleme, güvenlik ve diğer önemli işlevleri gerçekleştirebilirler. Ayrıca, içerik dağıtımı (CDN) gibi özellikleri de destekleyerek, kullanıcılara daha hızlı ve güvenilir bir deneyim sunmayı amaçlarlar.*
+
 C:\Users\SSB>curl -I https://www.w3.org/TR/referrer-policy/#referrer-policy-same-origin  
 HTTP/1.1 200 OK  
 Date: Fri, 04 Aug 2023 09:55:20 GMT  
@@ -69,6 +70,7 @@ CF-Cache-Status: BYPASS
 Set-Cookie: __cf_bm=j9c4CE.yTz8tS8t4AcHngjhfZ4qJLGJo_EKFGWiu3ro-1691142920-0-AWjV2A9XPY3ky7Kx760pUTkK9eXl/gdJwc/5ia+6vynzx8BoiB94PROFwKhT6uTLcEKBLCcLjat2Vo3DD1DibCQ=; path=/; expires=Fri, 04-Aug-23 10:25:20 GMT; domain=.w3.org; HttpOnly; Secure; SameSite=None  
 Server: cloudflare  
 *Cloudflare, web sitelerinin daha hızlı yüklenmesini sağlamak, güvenliği artırmak ve DDoS saldırıları gibi tehditlere karşı korumak amacıyla tasarlanmış bir platformdur. Cloudflare, kullanıcıların web sitelerine erişirken trafiği optimize ederek, içerikleri sunuculardan daha yakın noktalara taşıyarak ve güvenlik önlemleri uygulayarak daha iyi bir deneyim sunmayı amaçlar.*  
+
 C:\Users\SSB>curl -I https://www.geeksforgeeks.org/http-headers-x-frame-options/  
 HTTP/1.1 200 OK  
 Server: nginx  
@@ -80,6 +82,7 @@ Cache-Control: max-age=6800
 Date: Fri, 04 Aug 2023 09:56:36 GMT  
 Connection: keep-alive  
 Server-Timing: ak_p; desc="1691142996060_3283072311_314087296_256_4333_18_-_-";dur=1  
+
 C:\Users\SSB>curl -I https://www.cloudflare.com/learning/cdn/glossary/reverse-proxy/  
 HTTP/1.1 403 Forbidden  
 *HTTP/1.1 403 Forbidden ifadesi, bir web sunucusunun istemcinin (genellikle tarayıcının) isteğini reddettiğini belirten bir HTTP durum kodudur. Bu durum kodu, sunucunun istemciye, istenen kaynağa erişim izninin olmadığını ve isteğin reddedildiğini bildirir.*  
@@ -102,6 +105,7 @@ NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
 Server: cloudflare  
 CF-RAY: 7f15f4cf393b0564-OTP  
 alt-svc: h3=":443"; ma=86400  
+
 C:\Users\SSB>curl -I https://www.youtube.com/watch?v=KlzSBk7VMss&ab_channel=HackerSploit  
 HTTP/1.1 200 OK  
 Content-Type: text/html; charset=utf-8  
@@ -127,6 +131,7 @@ Set-Cookie: VISITOR_INFO1_LIVE=uDhXpQz7ja0; Domain=.youtube.com; Expires=Wed, 31
 Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000  
 'ab_channel' is not recognized as an internal or external command,  
 operable program or batch file.  
+
 C:\Users\SSB>curl -I https://www.ionos.com/digitalguide/server/tools/netcat/  
 HTTP/1.1 200 OK  
 Date: Fri, 04 Aug 2023 10:03:47 GMT  
@@ -149,6 +154,7 @@ Content-Language: en
 X-SFC-Tags: menuId_3, menuId_4, menuId_5, menuId_7, menuId_8, menuId_13, menuId_23113, menuId_23119, menuId_23120, menuId_23114, menuId_23123, menuId_23124, menuId_23115, menuId_23121, menuId_23116, menuId_23125, menuId_29, menuId_3775, pageId_2722  
 Via: 1.1 www.ionos.com  
 X-Cache-Status: MISS  
+
 C:\Users\SSB>curl -I https://www.solvusoft.com/tr/errors/tarayici-durum-kodlari/microsoft-corporation/windows-operating-system/http-error-405-method-not-allowed/  
 HTTP/1.1 200 OK  
 Server: SSWS???  
@@ -156,6 +162,7 @@ Content-Type: text/html; charset=UTF-8
 ZPC: HIT  
 Date: Fri, 04 Aug 2023 10:05:37 GMT  
 Connection: keep-alive  
+
 C:\Users\SSB>curl -I https://www.btk.gov.tr/  
 HTTP/1.1 200 OK  
 Date: Fri, 04 Aug 2023 10:10:01 GMT  
@@ -170,7 +177,8 @@ X-Frame-Options: deny
 Strict-Transport-Security: max-age=16070400  
 Referrer-Policy: no-referrer  
 Set-Cookie: TS012038c6=01e3f3f97d0782bb1b5aa8b304d8f7f5b31aec7defd875120050c391a86a1e07edfa24ee981cb05287f0abf2b65efba18ab914c627;   Path=/; Domain=.www.btk.gov.tr; Secure; HTTPOnly  
-BTK’nin server’I yok!  
+BTK’nin server’I yok! 
+
 C:\Users\SSB>curl -I https://tr.wikipedia.org/wiki/Bilgi_Teknolojileri_ve_%C4%B0leti%C5%9Fim_Kurumu  
 HTTP/1.1 200 OK  
 date: Fri, 04 Aug 2023 00:34:02 GMT  
@@ -197,8 +205,10 @@ set-cookie: GeoIP=TR:06:Ankara:39.96:32.79:v4; Path=/; secure; Domain=.wikipedia
 set-cookie: NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600  
 accept-ranges: bytes  
 content-length: 81945  
+
 C:\Users\SSB>curl -I https://www.tbmm.gov.tr/  
-curl: (56) Send failure: Connection was reset  
+curl: (56) Send failure: Connection was reset 
+
 C:\Users\SSB>curl -I https://www.aile.gov.tr/  
 HTTP/1.1 302 Found  
 *HTTP/1.1 302 Found, bir HTTP yanıt durum kodudur ve bir tarayıcının veya istemcinin bir yönlendirme (redirection) durumu ile karşılaştığını belirtir. Bu durum kodu, sunucunun, istemciyi talep ettiği kaynağın başka bir yerde bulunduğu bir yere yönlendirdiğini ifade eder.*  
@@ -209,6 +219,7 @@ Location: /ErrorPages/tr-TR/400.html?aspxerrorpath=/
 Date: Fri, 04 Aug 2023 10:28:39 GMT  
 Set-Cookie: BIGipServerAile_WebSitesi_Pool_80=677188780.20480.0000; path=/; Httponly; Secure  
 Set-Cookie: TS01d8a40f=01b15b2fcc03daea7ce41b4b17395979eb202b546a7347134299d093e596e101a886d6266d2e222fad8c08aeaaf5cb55a41a33ad0b4d1b5d6e92d6b9ed3007294c15deb1b1; Path=/; Domain=.www.aile.gov.tr  
+
 C:\Users\SSB>curl -I https://www.csgb.gov.tr/  
 HTTP/1.1 500 Internal Server Error  
 *500 Internal Server Error durum kodu, genellikle sunucu tarafinda bir konfigurasyon hatasi, veritabani sorunu , yazilim hatalari, hafiza sinirlarinin asilmasi gibi icsel sorunlarla iliskilendirilir.Sunucu tarafinda meydana gelen bu hatalar nedeniyle istemciye beklenmeyen bir yanit verilir ve genellikle kullaniciya web sitesinin normal sekilde calisamadigini gosterir.*  
@@ -217,13 +228,15 @@ Content-Length: 75
 Content-Type: text/html  
 X-Frame-Options: sameorigin  
 Date: Fri, 04 Aug 2023 10:29:17 GMT  
-C:\Users\SSB>curl -I https://www.mfa.gov.tr/default.tr.mfa  
+
+C:\Users\SSB>curl -I https://www.mfa.gov.tr/default.tr.mfa  (disisleri bakanligi)
 HTTP/1.1 404 Not Found  
 *404 Not Found bir HTTP yanit durum kodudur ve istemcinin talep ettigi kaynagin sunucu uzerinde bulunmadiini belirtir. Istemcinin istedigi URL veya kaynagin sunucu tarafinda mevcut olmadigini ifade eder.*  
 content-length: 1245  
 content-type: text/html  
 date: Fri, 04 Aug 2023 10:31:31 GMT  
 set-cookie: TS016fdcf6=0102bb402d816ed00dc22dd78f8412fd70403975ef65cf03ffab0c408811c14d6dc903939cbeb1803dc2978a7973cd18ae65353eba; Path=/; Domain=.www.mfa.gov.tr  
+
 C:\Users\SSB>curl -I http://www.ktb.gov.tr/  
 HTTP/1.0 301 Moved Permanently  
 *HTTP/1.0 301 Moved Permanently, bir HTTP yanıt durum kodudur ve bir web sitesinin veya kaynağının kalıcı olarak başka bir yere taşındığını belirtir. Bu durum kodu, istemcinin (tarayıcının veya istemcinin) talep ettiği kaynağın artık geçerli URL'de bulunmadığını, kalıcı olarak taşındığını ve gelecekte bu yeni URL'yi kullanması gerektiğini ifade eder. Bu durum kodu, tarayıcıların ve diğer istemcilerin otomatik olarak yeni URL'ye yönlendirilmesini sağlar. Kullanıcı, tarayıcı adres çubuğuna eski URL'yi girdiğinde veya eski bir bağlantıyı tıkladığında, tarayıcı otomatik olarak yeni URL'ye yönlendirir.*  
@@ -232,6 +245,7 @@ Server: BigIP
 *Bu ifade, web sitesinin F5 BIG-IP adlı bir ürün veya teknolojiyi kullanarak hizmet verdiğini gösterir. F5 BIG-IP, bir uygulama teslim kontrol cihazıdır. Bu cihaz, ağ trafiğini yönlendirme, yük dengeleme, hızlandırma, güvenlik, oturum yönetimi ve diğer uygulama katmanı işlevlerini yerine getirmek için kullanılır. BIG-IP, büyük ölçekli web siteleri, uygulama sunucuları, veritabanları ve diğer altyapılar için performansı artırmak, yükü denglemek ve güvenliği sağlamak amacıyla kullanılır.*  
 Connection: Keep-Alive  
 Content-Length: 0  
+
 C:\Users\SSB>curl -I https://www.meb.gov.tr/  
 HTTP/1.1 200 OK  
 Content-Length: 0  
@@ -240,6 +254,7 @@ Server: Microsoft-IIS/10.0
 *Bir web sitesinin sunucu yanıt başlığında bulunan bir bilgidir. Bu ifade, web sitesinin Microsoft Internet Information Services (IIS) adlı bir web sunucusu yazılımını ve belirli bir sürümünü kullanarak hizmet verdiğini gösterir. IIS, Microsoft tarafından geliştirilen ve Windows işletim sistemlerinde çalışan bir web sunucusu yazılımıdır. IIS, web sayfalarını ve diğer içerikleri istemcilere (kullanıcı tarayıcılarına) sunmak için kullanılır. Aynı zamanda ASP.NET gibi Microsoft'un web tabanlı teknolojilerini desteklemek için kullanılır.* 
 X-Powered-By: ASP.NET  
 Date: Fri, 04 Aug 2023 10:40:22 GMT  
+
 C:\Users\SSB>curl -I https://www.msb.gov.tr/  
 HTTP/1.1 403 Forbidden  
 Date: Fri, 04 Aug 2023 10:56:28 GMT  
@@ -284,16 +299,12 @@ Terminalde curl ile istek attigimda 405 uyarisi vermişti ama python ile istek a
 {'Date': 'Fri, 04 Aug 2023 12:01:58 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '408', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*'}  
 >>> r.url  
 'https://eoawsh0d2xvhx5o.m.pipedream.net/'  
->>> r.text  
-'{"about":"Pipedream is the fastest way to connects APIs. Build and run workflows with code-level control when you need it — and no code when you  don\'t.","event_id":"2TWEcqO4E3S8KEnD3uWtiaxf5UZ","workflow_id":"p_xMCPaaZ","owner_id":"o_JvIqzoE","deployment_id":"d_84semY8Y","timestamp":"2023-08-04T12:01:58.332Z","inspect":"https://pipedream.com/@/p_xMCPaaZ","quickstart":"https://pipedream.com/quickstart/"}'  
->>> r.requests  
-Traceback (most recent call last):  
-  File "<stdin>", line 1, in <module>  
-AttributeError: 'Response' object has no attribute 'requests'  
->>> r.elapsed  
+>>> r.text  *(Sitenin HTML içeriğini döndürür.)*
+'{"about":"Pipedream is the fastest way to connects APIs. Build and run workflows with code-level control when you need it — and no code when you  don\'t.","event_id":"2TWEcqO4E3S8KEnD3uWtiaxf5UZ","workflow_id":"p_xMCPaaZ","owner_id":"o_JvIqzoE","deployment_id":"d_84semY8Y","timestamp":"2023-08-04T12:01:58.332Z","inspect":"https://pipedream.com/@/p_xMCPaaZ","quickstart":"https://pipedream.com/quickstart/"}'   
+>>> r.elapsed  *(gecen zamani doner.)*
 datetime.timedelta(seconds=1, microseconds=245010)  
 
-
+## 405 durum kodu hatasi alan yanitlarin bir dosyaya yazilmasi
 import requests  
 
 def main():  
@@ -309,5 +320,30 @@ def main():
 if __name__ == "__main__":  
     main()  
 
+    ###Google dork 
+    google dork ile arama yapmayi ogrendim.
+
 ### REFERENCES:<br/>  
 https://www.hosting.com.tr/bilgi-bankasi/405-durum-kodu-method-not-allowed/#:~:text=405%20Durum%20Kodu%20(%20Method%20Not%20Allowed%20)&text=G%C3%B6nderilen%20sorgu%20t%C3%BCr%C3%BCn%C3%BC%20HTTP'nin,POST%20olarak%20de%C4%9Fi%C5%9Ftirip%20tekrar%20denemelisiniz.<br/>
+https://www.sinanerdinc.com/python-requests-modulu <br/>
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy <br/>
+https://developers.cloudflare.com/fundamentals/get-started/concepts/how-cloudflare-works/#:~:text=Fundamentally%2C%20Cloudflare%20is%20a%20large,link%20for%20your%20web%20traffic. <br/>
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control <br/>
+https://www.geeksforgeeks.org/http-headers-x-frame-options/ <br/>
+https://www.w3.org/TR/referrer-policy/#referrer-policy-same-origin <br/>
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy/accelerometer <br/>
+https://web.dev/origin-agent-cluster/ <br/>
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Cross-Origin_Resource_Policy  <br/>
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy <br/>
+https://http.dev/cross-origin-embedder-policy <br/>
+https://learn.microsoft.com/tr-tr/aspnet/web-api/overview/testing-and-debugging/troubleshooting-http-405-errors-after-publishing-web-api-applications <br/>
+https://elitemedya.com/405-method-not-allowed-hatasi-nasil-duzeltilir/ <br/>
+https://reqbin.com/req/84xntxmp/close-connection-example#:~:text=The%20%22Connection%3A%20close%22%20HTTP,after%20the%20request%20or%20not. <br/>
+https://www.sinanerdinc.com/python-requests-modulu <br/>
+https://www.youtube.com/watch?v=3yLrXiZEsBg&list=PLLftmqJYInB1rUu9f6q-JWJMHLZ6C22qp&index=25&ab_channel=SinanErdin%C3%A7 <br/>
+https://www.youtube.com/watch?v=tb8gHvYlCFs&ab_channel=CoreySchafer <br/>
+https://www.sadikturan.com/python-gelistirme-ortami/python-icin-komut-satiri-programinin-kullanimi/1367 <br/>
+https://pipedream.com/@ebrarkesici11/requestbin-p_xMCPaaZ/build *(rastgele web sitesi adresi aldigimiz site)* <br/>
+https://pipedream.com/@ebrarkesici11/requestbin-p_xMCPaaZ/build <br/>
+https://pwnlab.me/tr-google-dorks-ve-google-hacking/  <br/>
+https://www.google.com/search?q=intitle%3AHTTP%2F1.1+405+Not+Allowed&rlz=1C1GCEU_trTR921TR921&biw=1366&bih=619&ei=jOPMZNSMAvq9xc8P5qSSsAU&ved=0ahUKEwjUgt7Y9cKAAxX6XvEDHWaSBFYQ4dUDCA8&uact=5&oq=intitle%3AHTTP%2F1.1+405+Not+Allowed&gs_lp=Egxnd3Mtd2l6LXNlcnAiIGludGl0bGU6SFRUUC8xLjEgNDA1IE5vdCBBbGxvd2VkSKsnUM0FWNYhcAF4AJABAZgBmQSgAbwHqgEJMC4xLjEuNS0xuAEDyAEA-AEB4gMEGAEgQYgGAQ&sclient=gws-wiz-serp  <br/>
